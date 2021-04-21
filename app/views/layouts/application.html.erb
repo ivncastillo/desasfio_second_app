@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SecondApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <head>
+  <title>Second App </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all','data-turbolinks-track': 'reload' %>
+
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="left-sidebar is-preload">
+    <div id="page-wrapper">
+
+
+      <!-- Header -->
+      <div id="header">
+        <!-- Nav -->
+          <nav class="inner" id="nav">
+            <ul>
+              <li><a href="<%= root_path %>">Home</a></li>
+              <li><a href="<%= pages_test_path %>">Test</a></li>
+              <li><a href="<%= users_login_path %>">Log in</a></li>
+              <li><a href="<%= pages_about_us_path %>">About us</a></li>
+              
+            </ul>
+          </nav>
+      </div>
+
+      <div id="banner">
+        <%= yield %>
+      </div>
+
+
+      <!-- Footer -->
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <!-- Copyright -->
+                <div class="copyright">
+                  <ul class="menu">
+                    <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                  </ul>
+                </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+ 
+
+    <!-- Scripts -->
+
+
+    <%= javascript_include_tag 'application' %>
+
   </body>
+
 </html>
